@@ -1,5 +1,5 @@
 import React from 'react';
-import Grille from './components/Grille/Grille';
+import Grille from './Grille/Grille';
 import './App.css';
 
 class App extends React.Component {
