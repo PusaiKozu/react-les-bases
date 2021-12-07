@@ -37,3 +37,7 @@ class Todo extends React.Component {
 }
 
 export default Todo
+
+/// Pour chaque tache :
+// -> Modification, Terminer, Suppression
+// -> icones

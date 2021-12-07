@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Todo from './todoList/Todo/Todo';
+import ComposantUn from './cycleDeVie/ComposantUn';
 
 ReactDOM.render(
-  <Todo />,
+  <ComposantUn />,
   document.getElementById('root')
 );
