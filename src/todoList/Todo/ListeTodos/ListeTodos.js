@@ -1,7 +1,7 @@
 import React from 'react'
-import { Row, Col } from 'react-bootstrap'
+import './ListeTodo.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faCoffee, faAddressBook } from '@fortawesome/free-solid-svg-icons'
 
 class ListeTodos extends React.Component {
    render() {
@@ -11,6 +11,7 @@ class ListeTodos extends React.Component {
                <FontAwesomeIcon
                   icon={faCoffee}
                />
+               <FontAwesomeIcon icon={faAddressBook} />
                {item.id} - {item.texte}
             </li>
          )
@@ -18,13 +19,13 @@ class ListeTodos extends React.Component {
 
       return (
          <>
-            <Row>
-               <Col>
+            <div className='row test'>
+               <div className='col-10'>
                   <ul>
                      {listeTaches}
                   </ul>
-               </Col>
-            </Row>
+               </div>
+            </div>
          </>
       )
    }

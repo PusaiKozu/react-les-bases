@@ -38,4 +38,6 @@ class Grille extends React.Component {
    }
 }
 
+connect()()
+
 export default Grille

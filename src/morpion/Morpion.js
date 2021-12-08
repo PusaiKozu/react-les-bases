@@ -16,6 +16,7 @@ class App extends React.Component {
     }
   }
 
+
   // Fonction de vérification d'une grille gagnant (pour blocage du jeu)
   verifGagnant() {
     let combinaisons = [
@@ -93,10 +94,7 @@ class App extends React.Component {
     return (
       <>
         <p>{message}</p>
-        <Grille
-          grille={this.state.historique[this.state.tour].grille}
-          handleClic={(indice) => this.gestionClic(indice)}
-        />
+        <Grille />
         <ul>
           {listeBoutons}
         </ul>

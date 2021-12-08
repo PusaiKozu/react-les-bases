@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './index.css';
-import ComposantUn from './cycleDeVie/ComposantUn';
+import Main from './routage/Main';
 
 ReactDOM.render(
-  <ComposantUn />,
+  <BrowserRouter>
+    <Main />
+  </BrowserRouter>,
   document.getElementById('root')
 );

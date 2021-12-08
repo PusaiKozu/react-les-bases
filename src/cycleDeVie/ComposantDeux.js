@@ -4,12 +4,20 @@ import SaisieTodo from '../todoList/Todo/SaisieTodo/SaisieTodo'
 // Newschool
 //function ComposantDeux(props) {
 //const ComposantDeux = (props) => {
-function ComposantDeux({ width, height, id, shape, alt }) {
+function ComposantDeux({ historique, joueurSuivant, tour }) {
 //const ComposantDeux = ({ onClick }) => {
 
    // Hook d'état (création de clés)
-   const [tache, setTache] = useState("")
-   const [posts, setPosts] = useState([])
+   const [tache, setTache] = useState()
+   const [posts, setPosts] = useState([
+      {id: 1, texte: "qsdsdsqd", categorie: "manga", auteur:"Maelle"},
+      {id: 1, texte: "qsdsdsqd", categorie: "manga", auteur:"Maelle"},
+      {id: 1, texte: "qsdsdsqd", categorie: "manga", auteur:"Maelle"},
+      {id: 1, texte: "qsdsdsqd", categorie: "manga", auteur:"Maelle"},
+      {id: 1, texte: "qsdsdsqd", categorie: "manga", auteur:"Maelle"},
+      {id: 1, texte: "qsdsdsqd", categorie: "manga", auteur:"Maelle"},
+      {id: 1, texte: "qsdsdsqd", categorie: "manga", auteur:"Maelle"},
+   ])
 
    // Hook d'effet - tout le temps (construction, mise à jour, tout)
    useEffect(() => {
@@ -18,7 +26,16 @@ function ComposantDeux({ width, height, id, shape, alt }) {
 
    // Hook d'effet - équivalent ComponentDidMount
    useEffect(() => {
-      console.log("Je suis dans le useEffect")
+      // appel api
+      setPosts([
+         {id: 1, texte: "qsdsdsqd", categorie: "manga", auteur:"Maelle"},
+         {id: 1, texte: "qsdsdsqd", categorie: "manga", auteur:"Maelle"},
+         {id: 1, texte: "qsdsdsqd", categorie: "manga", auteur:"Maelle"},
+         {id: 1, texte: "qsdsdsqd", categorie: "manga", auteur:"Maelle"},
+         {id: 1, texte: "qsdsdsqd", categorie: "manga", auteur:"Maelle"},
+         {id: 1, texte: "qsdsdsqd", categorie: "manga", auteur:"Maelle"},
+         {id: 1, texte: "qsdsdsqd", categorie: "manga", auteur:"Maelle"},
+      ])
    }, [])
 
    // Hook d'effet - spécifique à une clé
@@ -48,12 +65,8 @@ function ComposantDeux({ width, height, id, shape, alt }) {
       console.log("Je fais quelque chose")
    }
 
-   let listeTodo = todo.map((item, indice) => {
-      return (
-         <li>
+   let histo = historique.map((item, indice) => {
 
-         </li>
-      )
    })
 
    // Rendu initial
@@ -70,3 +83,17 @@ function ComposantDeux({ width, height, id, shape, alt }) {
 }
 
 export default ComposantDeux
+
+
+
+
+// banniere (image de fond) + titre du site
+// tout à droite de la banniere - logo
+// menu horizontal      ||    caddie
+// -> contenu principal
+// -> liste de produits (3x3)
+// ----> ajouter au panier (bonus:quantité -> impacter le compteur de l'icone caddie)
+
+// Ticket de caisse - bouton payer
+// -> remets à zero le panier (mais on conserve le retrait des quantités)
+// -> on ne peut plus ajouter un produit sans stock (bouton grisé)

@@ -1,6 +1,7 @@
 import React from 'react'
 import SaisieTodo from './SaisieTodo/SaisieTodo'
 import ListeTodos from './ListeTodos/ListeTodos'
+import './Todo.css'
 
 class Todo extends React.Component {
    constructor(props) {
@@ -18,15 +19,16 @@ class Todo extends React.Component {
          termine: false
       }
       this.setState({
-         taches: this.state.taches.concat(newTodo)
+         taches: this.props.taches.concat(newTodo)
       })
    }
 
    render() {
       return (
          <>
+            <p className="texte">Hello</p>
             {/* Récupération de la saisie utilisateur */}
-            <SaisieTodo onClick={(txt) => this.addTodo(txt)} />
+            <SaisieTodo onClick={(txt) => this.props.addTodo(txt)} />
             {/* Affichage de la saisie utilisateur */}
             <ListeTodos
                tasks={this.state.taches}
